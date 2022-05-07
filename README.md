@@ -46,7 +46,7 @@ Put: update the element;
 Delete: remove the element;
 ```
 # Documentation
-* [SoapUI Documentation Link](https://documenter.getpostman.com/view/8513190/UyxdK9KL)
+* SoapUI Documentation Link: Attached file name wsdl-report.html
 
 
 # 👷‍♀️ Contributors
