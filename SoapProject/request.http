@@ -1,0 +1,373 @@
+###
+
+POST http://localhost:9797/soapapi/bookstore/user HTTP/1.1
+Content-Type: application/text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+     xmlns:jets="http://services.jets.iti.gov/">
+     <soap:Header>
+     <jets:UUID>ee48a600-2f95-4ae0-a501-05f1078cf025</jets:UUID>
+     </soap:Header>
+
+    <soap:Body>
+        <jets:addUser>
+            <arg0>
+                <!--birthDate>1997-03-31</birthDate-->
+                <userType>CLIENT</userType>
+                <userName>ahmeedd</userName>
+                <email>hafsaa@gmail.com</email>
+                <country>Egypt</country>
+                <city>Cairo</city>
+                <detailedAddress>maryoutyaGiza</detailedAddress>
+                <phoneNumber>01121409443</phoneNumber>
+                <wallet>2000</wallet>
+                <password>ahmed123</password>
+            </arg0>
+        </jets:addUser>
+    </soap:Body>
+</soap:Envelope>
+
+
+###
+POST http://localhost:9797/soapapi/bookstore/user HTTP/1.1
+Content-Type: application/text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+     xmlns:jets="http://services.jets.iti.gov/">
+     <soap:Header>
+     <jets:UUID>64c1acf3-8a8e-4a29-855f-0e20c81ae820</jets:UUID>
+     </soap:Header>
+
+    <soap:Body>
+        <jets:login>
+            <arg0>hafsaa@gmail.com</arg0>
+            <arg1>ahmed123</arg1>
+        </jets:login>
+    </soap:Body>
+</soap:Envelope>
+
+###
+
+POST http://localhost:9797/soapapi/bookstore/user HTTP/1.1
+Content-Type: application/text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+     xmlns:jets="http://services.jets.iti.gov/">
+     <soap:Header>
+     <jets:UUID>ee48a600-2f95-4ae0-a501-05f1078cf025</jets:UUID>
+     </soap:Header>
+
+    <soap:Body>
+        <jets:checkEmail>
+            <arg0>hafsaa@gmail.com</arg0>
+        </jets:checkEmail>
+    </soap:Body>
+</soap:Envelope>
+
+###
+
+POST http://localhost:9797/soapapi/bookstore/user HTTP/1.1
+Content-Type: application/text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+     xmlns:jets="http://services.jets.iti.gov/">
+     <soap:Header>
+     <jets:UUID>ee48a600-2f95-4ae0-a501-05f1078cf025</jets:UUID>
+     </soap:Header>
+
+    <soap:Body>
+        <jets:getUser>
+            <arg0>19</arg0>
+        </jets:getUser>
+    </soap:Body>
+</soap:Envelope>
+
+###
+
+POST http://localhost:9797/soapapi/bookstore/user HTTP/1.1
+Content-Type: application/text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+     xmlns:jets="http://services.jets.iti.gov/">
+     <soap:Header>
+     <jets:UUID>ee48a600-2f95-4ae0-a501-05f1078cf025</jets:UUID>
+     </soap:Header>
+
+    <soap:Body>
+        <jets:updateUser>
+            <arg0>
+                <!--birthDate>1997-03-31</birthDate-->
+                <userType>CLIENT</userType>
+                <userName>ahmeedd</userName>
+                <email>hafsaa@gmail.com</email>
+                <country>Egypt</country>
+                <city>Cairo00000</city>
+                <detailedAddress>maryoutyaGiza</detailedAddress>
+                <phoneNumber>01121409443</phoneNumber>
+                <wallet>2000</wallet>
+                <password>ahmed123</password>
+            </arg0>
+        </jets:updateUser>
+    </soap:Body>
+</soap:Envelope>
+
+###
+
+POST http://localhost:9797/soapapi/bookstore/user HTTP/1.1
+Content-Type: application/text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+     xmlns:jets="http://services.jets.iti.gov/">
+     <soap:Header>
+     <jets:UUID>ee48a600-2f95-4ae0-a501-05f1078cf025</jets:UUID>
+     </soap:Header>
+
+    <soap:Body>
+        <jets:removeUser>
+            <arg0>19</arg0>
+        </jets:removeUser>
+    </soap:Body>
+</soap:Envelope>
+
+
+########################PRODUCT################################
+
+POST http://localhost:9797/soapapi/bookstore/product HTTP/1.1
+Content-Type: application/text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+     xmlns:jets="http://services.jets.iti.gov/">
+     
+    <soap:Body>
+        <jets:addProduct>
+            <arg0>
+                <name>BOOK1</name>
+                <price>200</price>
+                <quantity>100</quantity>
+                <description>BOOK1</description>
+            </arg0>
+        </jets:addProduct>
+    </soap:Body>
+</soap:Envelope>
+
+####
+
+POST http://localhost:9797/soapapi/bookstore/product HTTP/1.1
+Content-Type: application/text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+     xmlns:jets="http://services.jets.iti.gov/">
+
+    <soap:Body>
+        <jets:editProduct>
+            <arg0>
+                <name>BOOK1</name>
+                <price>200</price>
+                <quantity>100</quantity>
+                <description>BOOK1</description>
+            </arg0>
+        </jets:editProduct>
+    </soap:Body>
+</soap:Envelope>
+
+###
+
+POST http://localhost:9797/soapapi/bookstore/product HTTP/1.1
+Content-Type: application/text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+     xmlns:jets="http://services.jets.iti.gov/">
+
+    <soap:Body>
+        <jets:removeProduct>
+            <arg0>1</arg0>
+        </jets:removeProduct>
+    </soap:Body>
+</soap:Envelope>
+
+###
+
+POST http://localhost:9797/soapapi/bookstore/product HTTP/1.1
+Content-Type: application/text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+     xmlns:jets="http://services.jets.iti.gov/">
+
+    <soap:Body>
+        <jets:getProductById>
+            <arg0>1</arg0>
+        </jets:getProductById>
+    </soap:Body>
+</soap:Envelope>
+
+########################CART################################
+
+
+POST http://localhost:9797/soapapi/bookstore/cart HTTP/1.1
+Content-Type: application/text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+     xmlns:jets="http://services.jets.iti.gov/">
+
+    <soap:Body>
+        <jets:getAllCarts>
+        </jets:getAllCarts>
+    </soap:Body>
+</soap:Envelope>
+
+###
+
+
+POST http://localhost:9797/soapapi/bookstore/cart HTTP/1.1
+Content-Type: application/text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+     xmlns:jets="http://services.jets.iti.gov/">
+
+    <soap:Body>
+        <jets:getCartList>
+            <arg0>1</arg0>
+        </jets:getCartList>
+    </soap:Body>
+</soap:Envelope>
+
+###
+
+POST http://localhost:9797/soapapi/bookstore/cart HTTP/1.1
+Content-Type: application/text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+     xmlns:jets="http://services.jets.iti.gov/">
+
+    <soap:Body>
+        <jets:addProductToCart>
+            <arg0>1</arg0>
+            <arg1>8</arg1>
+            <arg2>10</arg2>
+        </jets:addProductToCart>
+    </soap:Body>
+</soap:Envelope>
+
+
+###
+
+POST http://localhost:9797/soapapi/bookstore/cart HTTP/1.1
+Content-Type: application/text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+     xmlns:jets="http://services.jets.iti.gov/">
+
+    <soap:Body>
+        <jets:updateProduct>
+            <arg0>1</arg0>
+            <arg1>
+                <name>BOOK1</name>
+                <price>20000</price>
+                <quantity>10000</quantity>
+                <description>BOOK1</description>
+            </arg1>
+        </jets:updateProduct>
+    </soap:Body>
+</soap:Envelope>
+
+###
+
+POST http://localhost:9797/soapapi/bookstore/cart HTTP/1.1
+Content-Type: application/text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+     xmlns:jets="http://services.jets.iti.gov/">
+
+    <soap:Body>
+        <jets:removeCartProduct>
+            <arg0>
+                <userId>1</userId>
+                <productId>8</productId>
+            </arg0>
+        </jets:removeCartProduct>
+    </soap:Body>
+</soap:Envelope>
+
+########################ORDER################################
+
+
+
+POST http://localhost:9797/soapapi/bookstore/order HTTP/1.1
+Content-Type: application/text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+     xmlns:jets="http://services.jets.iti.gov/">
+
+    <soap:Body>
+        <jets:getAllOrders>
+        </jets:getAllOrders>
+    </soap:Body>
+</soap:Envelope>
+
+###
+
+POST http://localhost:9797/soapapi/bookstore/order HTTP/1.1
+Content-Type: application/text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+     xmlns:jets="http://services.jets.iti.gov/">
+
+    <soap:Body>
+        <jets:getOrderByUserId>
+            <arg0>1</arg0>
+        </jets:getOrderByUserId>
+    </soap:Body>
+</soap:Envelope>
+
+###
+
+
+POST http://localhost:9797/soapapi/bookstore/order HTTP/1.1
+Content-Type: application/text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+     xmlns:jets="http://services.jets.iti.gov/">
+
+    <soap:Body>
+        <jets:saveOrder>
+            <arg0>1</arg0>
+        </jets:saveOrder>
+    </soap:Body>
+</soap:Envelope>
+
+###
+
+
+POST http://localhost:9797/soapapi/bookstore/order HTTP/1.1
+Content-Type: application/text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+     xmlns:jets="http://services.jets.iti.gov/">
+
+    <soap:Body>
+        <jets:deleteOrder>
+            <arg0>8</arg0>
+            <arg1>2</arg1>
+        </jets:deleteOrder>
+    </soap:Body>
+</soap:Envelope>
+

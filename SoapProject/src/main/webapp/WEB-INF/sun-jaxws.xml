@@ -1,0 +1,22 @@
+<endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
+    <endpoint
+        name="UserWebService"
+        implementation="gov.iti.jets.services.impl.UserServiceImpl"
+        url-pattern="/bookstore/user" />
+
+    <endpoint
+        name="ProductWebService"
+        implementation="gov.iti.jets.services.impl.ProductServiceImpl"
+        url-pattern="/bookstore/product" />
+
+    <endpoint
+        name="CartWebService"
+        implementation="gov.iti.jets.services.impl.CartProductsServiceImpl"
+        url-pattern="/bookstore/cart" />
+
+    <endpoint
+        name="OrderWebService"
+        implementation="gov.iti.jets.services.impl.OrderServiceImpl"
+        url-pattern="/bookstore/order" />
+
+</endpoints>
